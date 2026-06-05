@@ -1,0 +1,232 @@
+/* Base Reset & Typography */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #4a4a4a;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    /* Background wave effect banane ke liye premium gradient curves use kiye hain */
+    background: radial-gradient(circle at 80% 20%, #f7f9fc 0%, #ffffff 50%),
+                radial-gradient(circle at 10% 60%, #f4f7fc 0%, #ffffff 60%);
+    background-attachment: fixed;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Common Section Styles */
+section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 140px;
+    gap: 40px;
+}
+
+/* Typography Details */
+h2 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    letter-spacing: 4px;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #7f8c8d;
+    max-width: 450px;
+}
+
+/* Hero Section */
+.hero-section {
+    margin-top: 20px;
+    margin-bottom: 160px;
+}
+
+.hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.main-logo {
+    max-width: 240px;
+    height: auto;
+    margin-bottom: 25px;
+}
+
+.tagline {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.sub-tagline {
+    font-size: 1.1rem;
+    color: #95a5a6;
+    margin-bottom: 35px;
+}
+
+.store-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.store-buttons img {
+    height: 48px;
+    transition: transform 0.2s ease;
+}
+
+.store-buttons img:hover {
+    transform: scale(1.05);
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Feature Images & Curved Shadows */
+.feature-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Specially tailored curved soft shadow as requested */
+.shadow-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.shadow-wrapper::after {
+    content: '';
+    position: absolute;
+    width: 90%;
+    height: 20px;
+    bottom: -15px;
+    left: 5%;
+    background: rgba(0, 0, 0, 0.08);
+    border-radius: 50%;
+    filter: blur(12px);
+    z-index: -1;
+}
+
+.feature-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.text-right {
+    align-items: flex-start;
+    padding-left: 60px;
+}
+
+.text-left {
+    align-items: flex-start;
+    padding-right: 60px;
+}
+
+/* Vector Icons for Future Section */
+.vectors-img {
+    max-width: 320px;
+    margin-bottom: 20px;
+    height: auto;
+}
+
+/* Footer Section */
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 100px;
+    padding-top: 40px;
+}
+
+.download-text {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.central-buttons {
+    margin-bottom: 40px;
+}
+
+.contact-text {
+    font-size: 1rem;
+    color: #7f8c8d;
+    margin-bottom: 60px;
+}
+
+.contact-text a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-text a:hover {
+    text-decoration: underline;
+}
+
+.footer-brand {
+    margin-top: 20px;
+}
+
+.brand-logo {
+    max-width: 120px;
+    height: auto;
+    opacity: 0.8;
+}
+
+/* Responsive Design (Mobile and Tablets Friendly) */
+@media (max-width: 992px) {
+    section {
+        flex-direction: column !important;
+        text-align: center !important;
+        margin-bottom: 100px;
+    }
+    
+    .hero-content, .text-left, .text-right {
+        align-items: center !important;
+        padding: 0 !important;
+    }
+
+    .hero-image, .feature-image {
+        justify-content: center !important;
+        width: 100%;
+    }
+
+    .hero-image img, .feature-image img {
+        max-width: 80%;
+    }
+}
